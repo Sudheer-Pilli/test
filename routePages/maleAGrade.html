@@ -1,0 +1,25 @@
+
+<div class="container mt-3" ng-controller="maleCtrl">
+    <h1>Search student</h1>
+
+    <table class="table table-collapse mt-5">
+        <thead>
+            <tr>
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Event</th>
+                <th>team</th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="stu in students | filter: s_team">
+            <tr>
+                <th>{{stu.s_regno}}</th>
+                <th>{{stu.s_name}}</th>
+                <th>{{stu.s_class}}</th>
+                <th>{{stu.s_event}}</th>
+                <th>{{stu.s_team}}</th>
+            </tr>
+        </tbody>
+    </table>
+</div>
